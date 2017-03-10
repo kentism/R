@@ -1,0 +1,71 @@
+> data[ ,c("names","age","gender","xx4","iris","grade")]
+  names age gender xx4 iris grade
+1     1   M      2   3    T     9
+2     2   F      4   6    T    18
+3     3   F      6   9    F    27
+4     4   M      8  12    T    36
+5     5   M     10  15    F    45
+> data <- data[ ,c("names","age","gender","xx4","iris","grade")]
+> data
+  names age gender xx4 iris grade
+1     1   M      2   3    T     9
+2     2   F      4   6    T    18
+3     3   F      6   9    F    27
+4     4   M      8  12    T    36
+5     5   M     10  15    F    45
+
+
+> colnames(data)[4] <- "xx4"
+> data
+  names gender age xx4 grade
+1     1      2   M   3     9
+2     2      4   F   6    18
+3     3      6   F   9    27
+4     4      8   M  12    36
+5     5     10   M  15    45
+> data$iris <- c("T","T","F","T","F")
+> data
+  names gender age xx4 grade iris
+1     1      2   M   3     9    T
+2     2      4   F   6    18    T
+3     3      6   F   9    27    F
+4     4      8   M  12    36    T
+5     5     10   M  15    45    F
+
+my.list.data <- data.frame(my.list)
+> my.list.data
+  x y
+1 1 a
+2 2 b
+> class(my.list.data)
+[1] "data.frame"
+> 
+> class(my.list)
+[1] "list"
+> myMAT
+Error: object 'myMAT' not found
+> myMAT <- matrix(x<-c('x','y'),y<-(1,2))
+Error: unexpected ',' in "myMAT <- matrix(x<-c('x','y'),y<-(1,"
+> myMAT <- matrix(x<-c('x','y'), y<-(1,2))
+Error: unexpected ',' in "myMAT <- matrix(x<-c('x','y'), y<-(1,"
+> myMAT <- matrix(1:4. nrow=2))
+Error: unexpected symbol in "myMAT <- matrix(1:4. nrow"
+> myMAT <- matrix(1:4. nrow=2)
+Error: unexpected symbol in "myMAT <- matrix(1:4. nrow"
+> myMAT <- matrix(1:4, nrow=2)
+> myMAT
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+> myMAT.data <- data.frame(myMAT)
+> myMAT.data
+  X1 X2
+1  1  3
+2  2  4
+> class(myMAT)
+[1] "matrix"
+> class(myMAY.data)
+Error: object 'myMAY.data' not found
+> class(myMAT.data)
+[1] "data.frame"
+> 
